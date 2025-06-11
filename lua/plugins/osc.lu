@@ -1,0 +1,18 @@
+return {
+  "ojroques/nvim-osc52",
+  config = function()
+    local osc52 = require("osc52")
+
+    osc52.setup({
+      trim = false,
+      tmux = false, -- set to false if you're not using tmux
+    })
+
+    -- Automatically copy selected text in Visual mode when pressing Ctrl+C
+    vim.keymap.set("v", "<leader>y", function()
+    local text = table.concat(vim.fn.getline("'<", "'>"), "\n")
+    osc52.copy(text)
+    end, { desc = "Copy to system clipboard (OSC52)" })
+  end,
+}
+
