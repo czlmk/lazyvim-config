@@ -26,3 +26,4 @@ vim.keymap.set('n', '=', '<C-w>+', { noremap = true, desc = 'Increase window hei
 vim.keymap.set('n', '-', '<C-w>-', { noremap = true, desc = 'Decrease window height' })
 vim.keymap.set('n', '_', '<C-w><', { noremap = true, desc = 'Decrease window width' })
 vim.keymap.set('n', '+', '<C-w>>', { noremap = true, desc = 'Increase window width' })
+vim.api.nvim_set_keymap("n", "<C-p>", [[<Cmd>lua require"fzf-lua".files()<CR>]], {})
