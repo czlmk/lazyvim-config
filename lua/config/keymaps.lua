@@ -30,3 +30,23 @@ vim.keymap.set('n', '<leader>wr', '<cmd>SessionSearch<CR>', { noremap = true, de
 vim.keymap.set('n', '<leader>ws', '<cmd>SessionSave<CR>', { noremap = true, desc = 'Save session' })
 vim.keymap.set('n', '<leader>wa', '<cmd>SessionToggleAutoSave<CR>', { noremap = true, desc = 'Toggle autosave' })
 vim.keymap.set("n", "<C-p>", "<Cmd>lua require('fzf-lua').files()<CR>", { noremap = true, desc = "FZF: Find Files" })
+
+-- fzf keymaps
+vim.keymap.set("n", "<leader>zgg", "<Cmd>lua require('fzf-lua').grep()<CR>", { noremap = true, desc = "FZF: grep" })
+vim.keymap.set("n", "<leader>zgl", "<Cmd>lua require('fzf-lua').grep_last()<CR>", { noremap = true, desc = "FZF: grep last" })
+vim.keymap.set("n", "<leader>zgw", "<Cmd>lua require('fzf-lua').grep_cword()<CR>", { noremap = true, desc = "FZF: grep word under cursor" })
+vim.keymap.set("n", "<leader>zgW", "<Cmd>lua require('fzf-lua').grep_cWORD()<CR>", { noremap = true, desc = "FZF: grep WORD under cursor" })
+vim.keymap.set("n", "<leader>zgp", "<Cmd>lua require('fzf-lua').grep_project()<CR>", { noremap = true, desc = "FZF: grep project" })
+vim.keymap.set("n", "<leader>zgc", "<Cmd>lua require('fzf-lua').grep_curbuf()<CR>", { noremap = true, desc = "FZF: grep current buffer" })
+vim.keymap.set("n", "<leader>zgq", "<Cmd>lua require('fzf-lua').grep_quickfix()<CR>", { noremap = true, desc = "FZF: grep quickfix" })
+vim.keymap.set("n", "<leader>zgl", "<Cmd>lua require('fzf-lua').grep_loclist()<CR>", { noremap = true, desc = "FZF: grep loclist" })
+
+vim.keymap.set("n", "<leader>zlc", "<Cmd>lua require('fzf-lua').lgrep_curbuf()<CR>", { noremap = true, desc = "FZF: live grep curbuf" })
+vim.keymap.set("n", "<leader>zlq", "<Cmd>lua require('fzf-lua').lgrep_quickfix()<CR>", { noremap = true, desc = "FZF: live grep quickfix" })
+vim.keymap.set("n", "<leader>zll", "<Cmd>lua require('fzf-lua').lgrep_loclist()<CR>", { noremap = true, desc = "FZF: live grep loclist" })
+vim.keymap.set("n", "<leader>zlg", "<Cmd>lua require('fzf-lua').live_grep()<CR>", { noremap = true, desc = "FZF: live grep" })
+vim.keymap.set("n", "<leader>zlr", "<Cmd>lua require('fzf-lua').live_grep_resume()<CR>", { noremap = true, desc = "FZF: live grep resume" })
+vim.keymap.set("n", "<leader>zlgg", "<Cmd>lua require('fzf-lua').live_grep_glob()<CR>", { noremap = true, desc = "FZF: live grep glob" })
+vim.keymap.set("n", "<leader>zln", "<Cmd>lua require('fzf-lua').live_grep_native()<CR>", { noremap = true, desc = "FZF: live grep native" })
+
+vim.keymap.set({ "n", "v" }, "<leader>zgv", "<Cmd>lua require('fzf-lua').grep_visual()<CR>", { noremap = true, desc = "FZF: grep visual" })
