@@ -19,13 +19,14 @@
 return {
   {
     "folke/which-key.nvim",
-    config = function()
+    opts = function(_, opts)
       local wk = require("which-key")
       wk.add({
         { "<leader>z", group = "Fzf"},
         { "<leader>zg", group = "Grep String" },
         { "<leader>zl", group = "Live Grep" },
       })
+      return opts
     end,
   },
 }
