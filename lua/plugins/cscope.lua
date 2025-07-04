@@ -1,7 +1,6 @@
 return {
     {
         "dhananjaylatkar/cscope_maps.nvim",
-        event = "VeryLazy",
         dependencies = {
             -- "nvim-telescope/telescope.nvim", -- optional [for picker="telescope"]
             "ibhagwan/fzf-lua", -- optional [for picker="fzf-lua"]
