@@ -93,3 +93,5 @@ tags
 /contrib/result-*
 
 CMakeUserPresets.json
+package-lock.json
+package.json
