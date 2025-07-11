@@ -9,6 +9,7 @@ return {
                 "c",
                 "cpp",
                 "html",
+                "gdscript",
             })
         end,
     },
