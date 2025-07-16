@@ -10,5 +10,15 @@ if vim.fn.has("macunix") == 0 then
         },
     }
 else
-    return {}
+    return {
+        "neovim/nvim-lspconfig",
+        opts = {
+            servers = {
+                gdscript = {
+                    name = "godot",
+                    cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
+                },
+            },
+        },
+    }
 end
