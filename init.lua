@@ -25,3 +25,6 @@ end
 
 require("oil").setup()
 vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+LazyVim.ui = LazyVim.ui or {}
+LazyVim.ui.foldexpr = LazyVim.treesitter.foldexpr

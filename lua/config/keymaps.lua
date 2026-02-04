@@ -26,8 +26,8 @@ vim.keymap.set('n', '=', '<C-w>+', { noremap = true, desc = 'Increase window hei
 vim.keymap.set('n', '-', '<C-w>-', { noremap = true, desc = 'Decrease window height' })
 vim.keymap.set('n', '_', '<C-w><', { noremap = true, desc = 'Decrease window width' })
 vim.keymap.set('n', '+', '<C-w>>', { noremap = true, desc = 'Increase window width' })
-vim.keymap.set('n', '<leader>wr', '<cmd>SessionSearch<CR>', { noremap = true, desc = 'Session search' })
-vim.keymap.set('n', '<leader>ws', '<cmd>SessionSave<CR>', { noremap = true, desc = 'Save session' })
+vim.keymap.set('n', '<leader>wr', '<cmd>AutoSession search<CR>', { noremap = true, desc = 'Session search' })
+vim.keymap.set('n', '<leader>ws', '<cmd>AutoSession save<CR>', { noremap = true, desc = 'Save session' })
 vim.keymap.set('n', '<leader>wa', '<cmd>SessionToggleAutoSave<CR>', { noremap = true, desc = 'Toggle autosave' })
 vim.keymap.set("n", "<C-p>", "<Cmd>lua require('fzf-lua').files()<CR>", { noremap = true, desc = "FZF: Find Files" })
 
