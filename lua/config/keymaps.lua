@@ -21,6 +21,19 @@ vim.keymap.set('n', '<A-h>', '<C-w>h', opts)
 vim.keymap.set('n', '<A-j>', '<C-w>j', opts)
 vim.keymap.set('n', '<A-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<A-l>', '<C-w>l', opts)
+
+-- Normal mode
+vim.keymap.set('n', '<A-H>', '<C-w>H', opts) -- move window to far left
+vim.keymap.set('n', '<A-L>', '<C-w>L', opts) -- move window to far right
+
+-- Insert mode
+vim.keymap.set('i', '<A-H>', [[<C-\><C-N><C-w>H]], opts)
+vim.keymap.set('i', '<A-L>', [[<C-\><C-N><C-w>L]], opts)
+
+-- Terminal mode
+vim.keymap.set('t', '<A-H>', [[<C-\><C-N><C-w>H]], opts)
+vim.keymap.set('t', '<A-L>', [[<C-\><C-N><C-w>L]], opts)
+
 -- Remap + and - to resize window height (like <C-w>+ and <C-w>-)
 vim.keymap.set('n', '=', '<C-w>+', { noremap = true, desc = 'Increase window height' })
 vim.keymap.set('n', '-', '<C-w>-', { noremap = true, desc = 'Decrease window height' })
