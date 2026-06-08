@@ -45,6 +45,7 @@ return {
           "diff",
           "csv",
           "bash",
+          "dockerfile",
         },
         highlight = {
           enable = true,
