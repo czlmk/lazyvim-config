@@ -19,6 +19,10 @@ return {
 
     -- Disable preselect and autocomplete
     opts.completion = opts.completion or {}
+    opts.completion.menu = opts.completion.menu or {}
+    opts.completion.menu.draw = opts.completion.menu.draw or {}
+    opts.completion.menu.draw.treesitter = {}
+
     opts.completion.list = opts.completion.list or {}
     opts.completion.list.selection = {
       preselect = false,
